@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant-Home</title>
+    <link rel="stylesheet" href="Styles/Style1.css">
+</head>
+<body>
+    <div>
+        <div id="resName">Venkatesh's Restaurant</div>
+        <div id="tag">
+              
+            
+                <select name="item" id="item"  class="tagInside">   
+                <option value="veg" class="option">Veg-Items</option>
+                <option value="nonVeg" class="option">Non-Veg-Items</option>
+                <option value="sweetsAndCollDrinks" class="option">Sweets and CoolDrinks</option>
+                <option value="FastFoods" class="option">Fast-Foods</option>
+                <option value="IceCrems" class="option">Ice-Creams</option>
+                </select>
+              
+            
+
+            <div  class="tagInside">
+                Home Delivery
+                
+            </div>
+
+            <div class="tagInside">
+                Contact
+            </div>
+
+            <div class="tagInside">
+                Book Rooms
+            </div>
+
+            <div class="tagInside">
+               Customer Reviews
+            </div>
+
+        </div>
+
+
+        <div id="login">
+
+            <form onsubmit="return passwordValidate()" action="login.php">
+                <p><input type="text" name="UserName" class="inputFiled" placeholder="User-Name"></p>
+                <p><input type="password" name="Password" class="inputFiled" placeholder="Password" id="password"></p>
+                <p><input type="password" name="CheckPassword" class="inputFiled" placeholder="Retype-Password" id="CheckPassword"></p>
+                <p><label id="invald" style="color:white; visibility:hidden">Password does'nt matches</label></p>
+                <p><button type="submit" id="btn">Log-In</button></p>
+            </form>
+
+            <div>
+                Not Yet Register ? Then Please 
+                Register Here <a href="#">Link</a>
+            </div>
+
+        </div>
+
+
+        <div id="footer">
+           <div class="insideFoot">
+               Contact : Venkatesh S <br>
+               Founder Of Venkatesh's Restaurant <br><br>
+               Details : <br>
+               Phone No : 7674070934 <br>
+               venkatesharjun16@gmail.com <br>
+           </div>
+
+           <div class="insideFoot">
+            Contact : Arjun Kumar <br>
+            CEO of Venkatesh's Restaurant <br><br>
+            Details : <br>
+            Phone No : 7688888890<br>
+            Venpro@gmail.com <br>
+           </div>
+
+           <div class="insideFoot">
+            Contact : Ragav D.S <br>
+            HR of Venkatesh's Restaurant <br><br>
+            Details : <br>
+            Phone No : 7888888890<br>
+            Hratpro@gmail.com <br>
+           </div>
+
+        </div>
+
+    </div>
+</body>
+  <script type="text/javascript">
+    function passwordValidate(){
+     var password = document.getElementById("password").value;
+     var CheckPassword = document.getElementById("CheckPassword").value;
+     
+     var n = password.localeCompare(CheckPassword);
+     if(n==0){
+        
+         return true;
+     }
+     else{
+       // document.write("password does'nt Matches");
+       document.getElementById("invald").style.visibility="visible";
+        return false;
+     }
+    }
+
+
+  </script>
+
+
+
+</html>
